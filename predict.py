@@ -1,7 +1,7 @@
 from keras.models import load_model
 import sys
 import random
-import numpy as np 
+import numpy as np
 from keras.preprocessing.text import Tokenizer
 from utils import *
 
