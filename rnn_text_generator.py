@@ -64,6 +64,7 @@ y = np.squeeze(y) #delete the axis that have shape 1 (case m=1)
 model = Sequential()
 model.add(LSTM(128, input_shape=(n, alphabet_size), dropout = 0.2))
 model.add(Dense(alphabet_size))
+model.add(Dense(alphabet_size))
 model.add(Activation('softmax'))
 
 adam = optimizers.Adam(lr=0.0005)
@@ -116,5 +117,5 @@ weights_path = 'weights.hdf5'
 checkpointer = ModelCheckpoint(filepath=weights_path, verbose=1)
 generator_callback = LambdaCallback(on_epoch_end=on_epoch_end)
 
-batch_size, epochs = 64, 2
+batch_size, epochs = 64, 50
 model.fit(x, y, batch_size=batch_size, epochs=epochs, callbacks=[checkpointer, generator_callback])
