@@ -70,15 +70,15 @@ def validate_verse(verses, silabas=11):
         counter = 0
         for word in words:
             d = dict_silabas_one_word(word, s)
-            counter = counter + d[word]
-            sil = s(word)
-            a = list(str(sil[-1]))
+            counter = counter + d[word] 
+            sil = s(word)  
+            a = list(str(sil[-1]))    
             b = list(str(sil[0]))
-            wordPastEnd = wordActualEnd
+            wordPastEnd = wordActualEnd       
             index1 = len(a)-2
             wordActualEnd = a[index1].lower()
             index2 = str(sil[0]).index(":")+1
-            wordActualStart = b[index2].lower()
+            wordActualStart = b[index2].lower()      
             if(wordPastEnd == 'v' and wordActualStart == 'v'):
                 counter = counter - 1
 
@@ -87,3 +87,7 @@ def validate_verse(verses, silabas=11):
 
     return validated_verses
 
+
+
+
+        
