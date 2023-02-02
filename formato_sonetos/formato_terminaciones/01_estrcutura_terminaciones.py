@@ -92,7 +92,10 @@ def create_sonnets (verses_2, city="santiago"):
     list_C = random.choices(list(verses_2[some2]), k=4)
     list_D = random.choices(list(verses_2[some3]), k=4)
 
-    sonnets = list_A[0]+"\n"+list_B[0]+"\n"+list_B[1]+"\n"+list_A[1]+"\n\n"+list_A[2]+"\n"+list_B[2]+"\n"+list_B[3]+"\n"+list_A[3]+"\n\n"+list_C[0]+"\n"+list_D[0]+"\n"+list_C[1]+"\n\n"+list_D[1]+"\n"+list_C[2]+"\n"+list_D[2]
+    sonnets = (list_A[0]+",\n"+list_B[0]+",\n"+list_B[1]+":\n"+list_A[1]+".\n\n"+
+              list_A[2]+",\n"+list_B[2]+":\n"+list_B[3]+",\n"+list_A[3]+".\n\n"+
+              list_C[0]+"?\n"+list_D[0]+",\n"+list_C[1]+".\n\n"+
+              list_D[1]+";\n"+list_C[2]+".\n"+list_D[2]+".\n\n")
 
     print (sonnets)
 

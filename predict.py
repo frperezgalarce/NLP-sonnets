@@ -12,6 +12,7 @@ import numpy as np
 from utils import *
 from keras.models import load_model
 from keras.preprocessing.text import Tokenizer
+#from tensorflow.keras.models import load_model
 
 
 ### Se carga el modelo entrenado
